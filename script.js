@@ -194,3 +194,13 @@ if (manifestoSection) {
     }
   });
 }
+
+// Email Obfuscation
+const contactBtn = document.getElementById('contact-btn');
+if (contactBtn) {
+  contactBtn.addEventListener('click', () => {
+    const user = 'ehtishams715';
+    const domain = 'gmail.com';
+    window.location.href = 'mailto:@';
+  });
+}
