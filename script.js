@@ -158,3 +158,39 @@ document.querySelectorAll('video[data-crop]').forEach(video => {
     }
   });
 });
+
+// Manifesto Section Animations
+const manifestoSection = document.querySelector('.manifesto-section');
+if (manifestoSection) {
+  ScrollTrigger.create({
+    trigger: '.manifesto-section',
+    start: 'top top',
+    end: 'bottom bottom',
+    pin: '.manifesto-heading-container',
+    pinSpacing: false
+  });
+
+  gsap.utils.toArray('.manifesto-content p').forEach(p => {
+    gsap.to(p, {
+      opacity: 1,
+      y: 0,
+      duration: 1.2,
+      ease: 'power2.out',
+      scrollTrigger: {
+        trigger: p,
+        start: 'top 85%',
+        toggleActions: 'play none none reverse'
+      }
+    });
+  });
+
+  gsap.to('.manifesto-heading-container', {
+    opacity: 0,
+    duration: 1,
+    scrollTrigger: {
+      trigger: '.manifesto-conclusion',
+      start: 'top 60%',
+      toggleActions: 'play none none reverse'
+    }
+  });
+}
