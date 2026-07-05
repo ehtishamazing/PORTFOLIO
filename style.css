@@ -665,10 +665,58 @@ footer {
 }
 
 @media (max-width: 900px) {
+  section, footer { padding: 80px 0; }
+  
   .hero-content, .section-head.split, .cinematic-grid, .content-grid, .poetry-columns {
     grid-template-columns: 1fr;
   }
-  .hero-hook { justify-self: start; }
+  
   .grid-item.feature { min-height: 400px; }
   .light-paper { transform: none; }
+  
+  nav.masthead {
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .navlinks {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  .preloader-media {
+    transform: scale(0.5);
+  }
+  
+  .hero-bg-text .text-row {
+    font-size: clamp(40px, 18vw, 150px);
+    transform: scaleX(1);
+    letter-spacing: normal;
+  }
+  
+  .hero-bottom-info {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+    padding-bottom: 20px;
+  }
+  
+  .roles-list {
+    align-items: center;
+  }
+  
+  .cta-text {
+    text-align: center;
+  }
+  
+  .hero-center-image {
+    height: 70vh;
+  }
+  
+  .stacked-images {
+    height: 400px;
+  }
 }
